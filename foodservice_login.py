@@ -1,7 +1,7 @@
 
 class login:
     def __init__(self):
-        self.__username = str(input("Enter name with initial : "))
+        self.__username = str(input("Enter Name : "))
         if type(self.__username) == str:
             print("Name verified sucessfully \n")
         else:
