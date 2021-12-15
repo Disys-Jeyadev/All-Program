@@ -1,7 +1,8 @@
-db={"Sriram":{"Nikunj","Karan","Nitesh","Sriman"},
-    "Jeyadev":{"Nitesh","Sriman","Vishal","Tara",}
-    }
-
+db={"Sriram":{"Crack","Ahamad","Nitesh","Sriman"},
+    "Jeyadev":{"Nitesh","Sriman","Vishal","Akash",},
+    "Akash":{"Jeyadev","Praveen","Ahamad","Thirupathi"}
+   "Ahamad":{"Thirupathi","Akash","Praven","Venkat"}
+   "Thirupathi":{"Arun","Crack","Ahamad","Akash"}}
 class Facebook:
 
     def __init__(self):
