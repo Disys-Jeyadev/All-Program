@@ -1,4 +1,5 @@
 import os
+import sys
 
 class Phonebook:
     def __init__(self):
@@ -20,17 +21,23 @@ class Phonebook:
         self.loadAll()
 
         #Prompt the user for the details of the new entry
-        name = input("ENTER NAME: ")
+        name = str(input("ENTER NAME: "))
         number = input("ENTER NUMBER: ")
+        if name == "" and name == "  " and len(name) < 15:
+            if number == 10:
 
         #Create a string to be written to the file
-        new_entry = name + '\t' + number + '\n'
+                new_entry = name + '\t' + number + '\n'
 
         #Write the string to the file
-        file = open(self.phonebook_file, 'a')
-        file.write(new_entry)
-        file.close()
-        Book_1.menu()
+                file = open(self.phonebook_file, 'a')
+                file.write(new_entry)
+                file.close()
+                Book_1.menu()
+            else:
+                sys.exit("Please Enter A Valid Number!!!!!")
+        else:
+            sys.exit("Please Enter A Valid Name")
         
     def readAll(self):
         self.loadAll()
