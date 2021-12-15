@@ -8,19 +8,19 @@ contacts={"dhanushaupi":9837423572,"paulupi":8875374234,"niteshupi":6538429534,
           "srimanupi":7126432857,"vidhyaupi":8756423657,"thakurupi":8877945681,
           "vijayupi":6549871590}  #Contact Databases
 
-class Gpay:    # Main App
+class Gpay:                                                                     # Main App
 
     def __init__(self):
         self.pay=input("Enter Number Or ID To Whom You Want To Pay:")
 
-    def payment(self): # Payment Process
+    def payment(self):                                                          # Payment Process
         if self.pay.isnumeric():
             valuecheck=contacts.values()
             if int(self.pay) in valuecheck:
                 paymentconfirmation()
             else:
-                contd=input("Do You Want To Add New Contact y/n?")
-                if contd=='y':
+                contd=input("Do You Want To Add New Contact Yes/No")
+                if contd=='yes':
                     addcontacts()
                 else:
                     sys.exit()
@@ -29,13 +29,13 @@ class Gpay:    # Main App
             if self.pay in keychecker :
                 paymentconfirmation()
             else:
-                conts=input("Do You Want To Add New Contact y/n?")
-                if conts=='y':
+                conts=input("Do You Want To Add New Contact Yes/No?")
+                if conts=='yes':
                     addcontacts()
                 else:
                     sys.exit()
 
-def paymentconfirmation(): # Payment Confirmation Process
+def paymentconfirmation():                                                      # Payment Confirmation Process
     amount=int(input("Enter the Amount to be sent:"))
     key=otpgen()
     print("\n")
@@ -44,9 +44,9 @@ def paymentconfirmation(): # Payment Confirmation Process
     if key==value:
         print("                       Transaction Successful Paid %d RS"%amount)
         print("\n")
-        cont=input("Do You Want To Continue y/n?")
+        cont=input("Do You Want To Continue Yes/No?")
         print("\n")
-        if cont=='y':
+        if cont=='Yes':
             menu()
         else:
             print("""Thank You For Using Google Pay""")
@@ -54,15 +54,15 @@ def paymentconfirmation(): # Payment Confirmation Process
     else:
         print("                       Transaction Failed")
         print("\n")
-        j=input("Do You Want To Continue y/n?")
+        j=input("Do You Want To Continue Yes/No?")
         print("\n")
-        if j=='y':
+        if j=='Yes':
             menu()
         else:
             print("""Thank You For Using Google Pay""")
             sys.exit()
 
-kdef otpgen():  # OTP Generation Process
+def otpgen():                                                                       # OTP Generation Process
     otp=""
     digits="0123456789"
 
@@ -74,7 +74,7 @@ kdef otpgen():  # OTP Generation Process
     return (int(otp))
 
 
-def addcontacts(): # Add New Contacts Process
+def addcontacts():                                                                  # Add New Contacts Process
     upiid=input("Enter UPI ID:")
     phonenumber=input("Enter Your Phone Number:")
     if len(phonenumber)==10:
@@ -92,10 +92,10 @@ def viewcontacts(): # Viewing Contact List"
     menu()
 
 
-def menu():  # Menu Enables Us To Use The App
+def menu():                                                                         # Menu Enables Us To Use The App
     print("""
-    1.Pay
-    2.Add Contacts
+    1.Pay                        
+    2.Add Contacts            
     3.View Contacts
     4.Exit App
     """)
