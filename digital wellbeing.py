@@ -28,6 +28,8 @@ class Track:
         print("\n")
         time.sleep(3)
         menu()
+
+
 def add_data(na, noa):
     temp = {}
     '''na = input("Enter Your Name:")

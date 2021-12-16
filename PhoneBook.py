@@ -1,4 +1,4 @@
-import os
+
 import sys
 import time
 
@@ -17,6 +17,8 @@ class Phonebook:
         for line in file.readlines():
             name, number = line.strip().split()
             self.__phonebook[name] = number
+            self.__phonebook[name] = number
+
         file.close()
 
     def addEntry(self):
