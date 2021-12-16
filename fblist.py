@@ -1,8 +1,10 @@
+
 db={"Sriram":{"Nikunj","Karan","Nitesh","Sriman"},
     "Jeyadev":{"Nitesh","Sriman","Vishal","Tara",},
     "Akash": {"Jeyadev", "Praveen", "Ahamad", "Thirupathi"},
     "Ahamad": {"Thirupathi", "Akash", "Praven", "Venkat"},
     "Thirupathi": {"Arun", "Crack", "Ahamad", "Akash"}}
+
 
 
 class Facebook:
@@ -67,7 +69,7 @@ def menu():
         for i in mutualfriends:
             print(i,end=" ")
 
-    elif(preference==3):
+    elif(preference == 3):
         name=input("Enter Your Name To Display Your Friendlist:")
         displayfriends(name)
 
